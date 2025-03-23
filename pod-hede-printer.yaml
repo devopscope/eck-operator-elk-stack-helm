@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hede-printer
+spec:
+  containers:
+  - name: hede-container
+    image: alpine:latest
+    command: ["/bin/sh", "-c"]
+    args:
+    - while true; do
+        echo "hede";
+        sleep 10;
+      done
